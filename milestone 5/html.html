@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Resume</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+
+    <h1>Dynamic Interactive Resume Builder</h1>
+
+    <form id="resume-form">
+        <label for="name" class="form-element">Full Name:</label>
+        <input type="text" id="name" name="name" class="form-input" required>
+
+        <label for="dob" class="form-element">DOB:</label>
+        <input type="date" id="dob" name="dob" class="form-input" min="1960-01-01" required>
+
+        <label for="email" class="form-element">Email:</label>
+        <input type="email" id="email" name="email" class="form-input" required>
+
+        <label for="phone" class="form-element">Cell #:</label>
+        <input type="text" id="phone" name="phone" class="form-input" required>
+
+        <label for="address" class="form-element">Address:</label>
+        <textarea id="address" name="address" class="form-input" required></textarea>
+
+        <label for="about" class="form-element">About Me:</label>
+        <textarea id="about" name="about" class="form-input" required></textarea>
+
+        <label for="photo" class="form-element">Upload Photo:</label>
+        <input type="file" id="photo" name="photo" accept="image/*" class="form-input">
+
+        <label for="education" class="form-element">Education:</label>
+        <textarea id="education" name="education" rows="3" class="form-input" required></textarea>
+
+        <label for="skills" class="form-element">Skills (comma-separated):</label>
+        <input type="text" id="skills" name="skills" class="form-input" required>
+
+        <label for="experience" class="form-element">Work Experience:</label>
+        <textarea id="experience" name="experience" rows="3" class="form-input" required></textarea>
+
+        <button type="submit" class="button">Generate CV</button>
+    </form>
+
+    <div id="resume" style="display:none;">
+        <div id="section1">
+            <header>
+                <img id="display-photo" alt="" style="width: 150px; height: 150px;">
+            </header>
+    
+            <section id="personal-info">
+                <ul>
+                    <li><span id="display-name" contenteditable="true"></span></li><br>
+                    <li><b>About Me: </b><br><span id="display-about" contenteditable="true"></span></li><br> <!-- About Me Section -->
+                    <li><b>Date of Birth: </b><span id="display-dob" contenteditable="true"></span></li><br>
+                    <li><b>Phone: </b><br><span id="display-phone" contenteditable="true"></span></li><br>
+                    <li><b>Email: </b><br><span id="display-email" contenteditable="true"></span></li><br>
+                    <li><b>Address: </b><br><span id="display-address" contenteditable="true"></span></li>
+                </ul>
+            </section>
+        </div>
+
+        <div id="section2">
+            <section id="display-education">
+                <h2>Education</h2>
+                <ul id="display-education-text"></ul>
+            </section>
+    
+            <section id="display-skills">
+                <h2>Skills</h2>
+                <ul id="display-skills-text"></ul>
+            </section>
+    
+            <section id="display-experience">
+                <h2>Work Experience</h2>
+                <ul id="display-experience-text"></ul>
+            </section>
+        </div>
+
+    </div>
+    <div id="shareSection" style="margin-top: 20px;">
+        <p><strong>Shareable Link:</strong> <span id="shareLink"></span></p>
+        <button id="copyLinkBtn">Copy Link</button>
+        <button id="downloadPdfBtn">Download as PDF</button>
+    </div>
+
+    <button class="button" id="regenerate-cv" style="margin-top: 10px;">Generate New</button>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+</body>
+</html>

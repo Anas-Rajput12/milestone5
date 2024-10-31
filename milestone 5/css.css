@@ -1,0 +1,129 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px; /* Limit the width for better readability */
+    margin: auto; /* Center the container */
+    background-color: gray;
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-element {
+    margin-bottom: 10px; /* Space between elements */
+    font-weight: bold;
+}
+
+.form-input {
+    width: 98%; /* Full width */
+    padding: 10px; /* Padding for comfort */
+    margin-bottom: 20px; /* Space below each input */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    transition: border-color 0.3s; /* Smooth transition */
+}
+
+.form-input:focus {
+    border-color: #0e4086; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.button {
+    background-color: #0e4086; /* Button color */
+    color: white; /* Button text color */
+    padding: 10px; /* Padding inside button */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    width: 100%; /* Full width */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.button:hover {
+    background-color: #0b2e5b; /* Darker shade on hover */
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing only */
+}
+
+/* Layout for Resume Section */
+#resume {
+    display: flex; /* Use flexbox for layout */
+    height: 100%;
+}
+
+#section1 {
+    background-color: #0e4086; /* Example background color */
+    color: white; /* Text color */
+    width: 35%; /* Set width to 35% */
+    min-height: 100vh;
+    padding: 20px; /* Padding for spacing */
+}
+
+#section2 {
+    background-color: white; /* Example background color */
+    color: black; /* Text color */
+    width: 65%; /* Set width to 65% */
+    min-height: 100vh; /* Fill viewport height */
+    padding: 20px; /* Padding for spacing */
+}
+
+#resume img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    background-color: white;
+    margin-top: 7%;
+    margin-left: 20%;
+}
+
+#section1 ul li {
+    list-style: none;
+    margin: 0 auto;
+    width: 75%;
+    margin-left: 10%;
+}
+
+#section2 h2 {
+    background-color: #0e4086;
+    color: #f4f4f4;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #resume {
+        flex-direction: column; /* Stack sections vertically */
+    }
+
+    #section1, 
+    #section2 {
+        width: 100%; /* Full width on smaller screens */
+        min-height: auto; /* Adjust height */
+        margin-left: 0; /* Reset left margin */
+    }
+
+    #section1 {
+        margin-bottom: 20px; /* Space between sections */
+    }
+
+    #resume img {
+        margin-left: auto; /* Centering on small screens */
+        margin-right: auto;
+    }
+}
