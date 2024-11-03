@@ -1,4 +1,3 @@
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -62,14 +61,13 @@ textarea {
 /* Layout for Resume Section */
 #resume {
     display: flex; /* Use flexbox for layout */
-    height: 100%;
 }
 
 #section1 {
     background-color: #0e4086; /* Example background color */
     color: white; /* Text color */
     width: 35%; /* Set width to 35% */
-    min-height: 100vh;
+    min-height: 100vh; /* Fill viewport height */
     padding: 20px; /* Padding for spacing */
 }
 
