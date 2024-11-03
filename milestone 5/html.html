@@ -9,10 +9,12 @@
 </head>
 <body>
 
-    <h1>Dynamic Interactive Resume Builder</h1>
+    <h1 style="text-align: center;">Dynamic Interactive Resume Builder</h1>
 
     <form id="resume-form">
-        <label for="name" class="form-element">Full Name:</label>
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name" class="form-element">Full Name:</label>
         <input type="text" id="name" name="name" class="form-input" required>
 
         <label for="dob" class="form-element">DOB:</label>
@@ -32,17 +34,28 @@
 
         <label for="photo" class="form-element">Upload Photo:</label>
         <input type="file" id="photo" name="photo" accept="image/*" class="form-input">
+        </fieldset>
 
-        <label for="education" class="form-element">Education:</label>
-        <textarea id="education" name="education" rows="3" class="form-input" required></textarea>
+        <fieldset>
+            <legend>Education</legend>
+            <label for="education" class="form-element">Education:</label>
+            <textarea id="education" name="education" rows="3" class="form-input" required></textarea>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Skills</legend>
+            <label for="skills" class="form-element">Skills (comma-separated):</label>
+            <input type="text" id="skills" name="skills" class="form-input" required>
+        </fieldset>
 
-        <label for="skills" class="form-element">Skills (comma-separated):</label>
-        <input type="text" id="skills" name="skills" class="form-input" required>
-
-        <label for="experience" class="form-element">Work Experience:</label>
-        <textarea id="experience" name="experience" rows="3" class="form-input" required></textarea>
+        <fieldset>
+            <legend>Experience</legend>
+            <label for="experience" class="form-element">Work Experience:</label>
+            <textarea id="experience" name="experience" rows="3" class="form-input" required></textarea>
+        </fieldset>
 
         <button type="submit" class="button">Generate CV</button>
+
     </form>
 
     <div id="resume" style="display:none;">
